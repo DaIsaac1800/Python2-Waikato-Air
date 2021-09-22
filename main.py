@@ -1,7 +1,10 @@
 import Lists
-print("Welcome to waikato air")
-choice = input("What is number name")
-if choice in Lists.test():
-    print("Cool")
-else:
-    print("Not Cool")
+def menu(list):
+    no = 0
+    for i in list:
+         print(i)
+    for i in list:
+        for j in list[no]:
+            print(j)
+        no += 1
+menu(Lists.test)
