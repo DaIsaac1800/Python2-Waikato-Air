@@ -1,0 +1,1 @@
+destinations = ("Waikato to Wellington", "Wellington to Waikato")
