@@ -14,8 +14,9 @@ name = input("What would you like to be called? ").strip().lower()
 # asks for users name and saves as name
 functions.linebreak()
 
-print("{} please choose a destination (Using numbers)".format(name.capitalize()))
-# used to help user understand what to do
+print("{} please choose a destination (Using numbers)"
+.format(name.capitalize()))
+# used to help the user understand what to do
 print()
 
 y = 1
@@ -30,8 +31,10 @@ while True:
     else:
         print('That is not a choice')
 # this is for choosing a destination from the list
+functions.linebreak()
 
 print('''Your choice is: {}
-The price for this is: ${}
+The price for this is: ${:.2f}
 '''.format(lists.destinations[choice]['destination'],
            lists.destinations[choice]['price']))
+# prints the price and destination of the flight
