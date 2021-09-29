@@ -5,6 +5,8 @@ import functions
 
 print("Welcome to waikato air booking services")
 
+print(lists.destinations)
+
 functions.linebreak()
 # is line break repeated multiple times
 
@@ -16,14 +18,20 @@ print("{} please choose a destination (Using numbers)".format(name.capitalize())
 # used to help user understand what to do
 print()
 
-y = 0
+y = 1
 for x in lists.destinations:
+    print("{}: {}".format(y, lists.destinations[x]['destination']))
     y += 1
-    print("{}: {}".format(y, x))
 # used to print out the destinations
 while True:
-    choice = input("Answer here: ")
-    if choice in lists.prices:
+    choice = int(input("Answer here: "))
+    if choice in lists.destinations:
         break
     else:
-        print("That is not a destination")
+        print('That is not a choice')
+# this is for choosing a destination from the list
+
+print('''Your choice is: {}
+The price for this is: ${}
+'''.format(lists.destinations[choice]['destination'],
+           lists.destinations[choice]['price']))
