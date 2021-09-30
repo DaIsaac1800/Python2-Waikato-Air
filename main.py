@@ -8,7 +8,7 @@ print("Welcome to waikato air booking services")
 functions.linebreak()
 # is line break repeated multiple times
 
-name = input("What would you like to be called? ").strip().lower()
+name = functions.name()
 # asks for users name and saves as name
 functions.linebreak()
 
@@ -19,6 +19,7 @@ print()
 
 functions.list(lists.destinations, 'destination')
 # used to print out the destinations
+
 while True:
     choice = input("Answer here: ")
     if choice in lists.destinations:
