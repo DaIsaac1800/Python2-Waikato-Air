@@ -14,12 +14,12 @@ def list(dict, sub_list):
 # Just an maximuinm charter limit for names
 def name():
     while True:
-        name = input('''What would you like to be called? (min 3, max 28)
-        Enter Here: ''').strip('!').lower()
-        if len(name) <= 28 and len(name) >= 3:
+        name = input('''What would you like to be called? (min 2, max 26)
+Enter Here: ''').strip('!').lower()
+        if len(name) <= 26 and len(name) >= 2:
             break
-        elif len(name) >= 28 or len(name) <= 3:
-            print('That name is to long or short')
+        elif len(name) >= 26 or len(name) <= 2:
+            print('That name is incorrect')
         else:
             print("I don't know how you did this")
     return name
