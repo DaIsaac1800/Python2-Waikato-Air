@@ -11,7 +11,7 @@ def list(dict, sub_list):
         print("{}: {}".format(y, dict[x][sub_list]))
         y += 1 
 
-# Just an maximuinm charter limit for names
+# Maximuinm chacter limit for names and asking for names
 def name():
     while True:
         name = input('''What would you like to be called? (min 2, max 26)
