@@ -32,4 +32,4 @@ def destination(dict):
             break
         else:
             print('That is not a choice')
-
+    return choice

@@ -20,13 +20,9 @@ print()
 functions.list(lists.destinations, 'destination')
 # used to print out the destinations
 
-while True:
-    choice = input("Answer here: ")
-    if choice in lists.destinations:
-        break
-    else:
-        print('That is not a choice')
+choice = functions.destination(lists.destinations)
 # this is for choosing a destination from the list
+
 functions.linebreak()
 
 print('''Your choice is: {}
@@ -34,3 +30,5 @@ The price for this is: ${:.2f}
 '''.format(lists.destinations[choice]['destination'],
            lists.destinations[choice]['price']))
 # prints the price and destination of the flight
+
+input('is this right?\n1: Yes \n2: No\nAnswer here: ')
