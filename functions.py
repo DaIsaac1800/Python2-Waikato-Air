@@ -1,17 +1,17 @@
-# Fuction used to make linebreaks
+# fuction used to make linebreaks
 def linebreak():
     print('''
 --------------------------------------------''')
 
-# Function for listing of items from a dictonarie
-# Can only be used to call nested dictonaries 
+# function for listing off items from a dictonarie
+# can only be used to call double nested dictonaries 
 def list(dict, sub_list):
     y = 1
     for x in dict:
         print("{}: {}".format(y, dict[x][sub_list]))
         y += 1 
 
-# Maximuinm chacter limit for names and asking for names
+# maximuinm chacter limit for names and asking for names
 def name():
     while True:
         name = input('''What would you like to be called? (min 2, max 26)
@@ -23,3 +23,13 @@ Enter Here: ''').strip('!').lower()
         else:
             print("I don't know how you did this")
     return name
+
+# destination chooser
+def destination(dict):
+    while True:
+        choice = input("Answer here: ")
+        if choice in dict:
+            break
+        else:
+            print('That is not a choice')
+
