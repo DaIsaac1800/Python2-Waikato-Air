@@ -31,4 +31,11 @@ The price for this is: ${:.2f}
            lists.destinations[choice]['price']))
 # prints the price and destination of the flight
 
-input('is this right?\n1: Yes \n2: No\nAnswer here: ')
+while True:
+    confirm = input('is this right?\n1: Yes \n2: No\nAnswer here: ')
+    if confirm in lists.confirmation[0]:
+        break
+    elif confirm in lists.confirmation[1]:
+        print('bob')
+    else:
+        print('that is not a choice avalible')
