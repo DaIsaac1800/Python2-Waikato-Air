@@ -23,12 +23,7 @@ functions.list(lists.destinations, 'destination')
 choice = functions.destination(lists.destinations)
 # this is for choosing a destination from the list
 
-functions.linebreak()
-
-print('''Your choice is: {}
-The price for this is: ${:.2f}
-'''.format(lists.destinations[choice]['destination'],
-           lists.destinations[choice]['price']))
+functions.price(lists.destinations, choice)
 # prints the price and destination of the flight
 
 while True:
@@ -36,6 +31,6 @@ while True:
     if confirm in lists.confirmation[0]:
         break
     elif confirm in lists.confirmation[1]:
-        print('bob')
+        break
     else:
         print('that is not a choice avalible')

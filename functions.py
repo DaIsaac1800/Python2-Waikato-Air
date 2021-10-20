@@ -32,4 +32,27 @@ def destination(dict):
             break
         else:
             print('That is not a choice')
+    linebreak()
     return choice
+        
+# prints the price and destination of the flight
+def price(dict, choice):
+    print('''Your choice is: {}
+The price for this is: ${:.2f}
+    '''.format(dict[choice]['destination'],
+               dict[choice]['price']))
+
+
+
+# a repetable confirmer if there is two answers
+def confirmer(question, list):
+    while True:
+        confirm = input('{}\n1: Yes \n2: No\nAnswer here: '.format(question)).lower()
+        if confirm in list[0]:
+            return confirm
+            break
+        elif confirm in list[1]:
+            return confirm
+            break
+        else:
+            print('that is not a choice avalible')
