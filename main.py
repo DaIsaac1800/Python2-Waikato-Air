@@ -11,12 +11,10 @@ functions.linebreak()
 name = functions.name()
 # asks for users name and saves as name
 
-
-# used to help the user understand what to do
-
 choice = functions.destination(lists.destinations, 'destination', name)
 # used to print out the destinations
 # this is for choosing a destination from the list
+# used to help the user understand what to do
 
 functions.price(lists.destinations, choice)
 # prints the price and destination of the flight

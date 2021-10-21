@@ -3,16 +3,17 @@ def linebreak():
     print('''
 ======================================================================''')
 
+
 # destination chooser
 # function for listing off avaliable destinations
 # allowing the user to choose from a nested dictonarie
 def destination(dict, sub_list, name):
     print("{}, please choose a destination (Using numbers)\n"
-.format(name.capitalize()))
+          .format(name.capitalize()))
     y = 1
     for x in dict:
         print("{}: {}".format(y, dict[x][sub_list]))
-        y += 1 
+        y += 1
     while True:
         choice = input("Answer here: ")
         if choice in dict:
@@ -20,7 +21,9 @@ def destination(dict, sub_list, name):
         else:
             print('That is not a choice')
     linebreak()
+# returns the choosen answer provided by user
     return choice
+
 
 # maximuinm chacter limit for names and asking for names
 def name():
@@ -36,6 +39,7 @@ Enter Here: ''').strip('!').lower()
     linebreak()
     return name
 
+
 # prints the price and destination of the flight
 def price(dict, choice):
     print('''Your choice is: {}
@@ -44,11 +48,11 @@ The price for this is: ${:.2f}
                dict[choice]['price']))
 
 
-
 # a repetable confirmer if there is two answers
 def confirmer(question, list):
     while True:
-        confirm = input('{}\n1: Yes \n2: No\nAnswer here: '.format(question)).lower()
+        confirm = input('{}\n1: Yes \n2: No\nAnswer here: '
+                        .format(question)).lower()
         if confirm in list[0]:
             return confirm
             break
