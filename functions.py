@@ -1,7 +1,8 @@
 # fuction used to make linebreaks
 def linebreak():
     print('''
---------------------------------------------''')
+======================================================================
+''')
 
 # function for listing off items from a dictonarie
 # can only be used to call double nested dictonaries 
