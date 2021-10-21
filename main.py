@@ -10,17 +10,12 @@ functions.linebreak()
 
 name = functions.name()
 # asks for users name and saves as name
-functions.linebreak()
 
-print("{}, please choose a destination (Using numbers)"
-.format(name.capitalize()))
+
 # used to help the user understand what to do
-print()
 
-functions.list(lists.destinations, 'destination')
+choice = functions.destination(lists.destinations, 'destination', name)
 # used to print out the destinations
-
-choice = functions.destination(lists.destinations)
 # this is for choosing a destination from the list
 
 functions.price(lists.destinations, choice)

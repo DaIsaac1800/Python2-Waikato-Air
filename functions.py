@@ -3,13 +3,24 @@ def linebreak():
     print('''
 ======================================================================''')
 
-# function for listing off items from a dictonarie
-# can only be used to call double nested dictonaries 
-def list(dict, sub_list):
+# destination chooser
+# function for listing off avaliable destinations
+# allowing the user to choose from a nested dictonarie
+def destination(dict, sub_list, name):
+    print("{}, please choose a destination (Using numbers)\n"
+.format(name.capitalize()))
     y = 1
     for x in dict:
         print("{}: {}".format(y, dict[x][sub_list]))
         y += 1 
+    while True:
+        choice = input("Answer here: ")
+        if choice in dict:
+            break
+        else:
+            print('That is not a choice')
+    linebreak()
+    return choice
 
 # maximuinm chacter limit for names and asking for names
 def name():
@@ -22,19 +33,9 @@ Enter Here: ''').strip('!').lower()
             print('That name is incorrect')
         else:
             print("I don't know how you did this")
+    linebreak()
     return name
 
-# destination chooser
-def destination(dict):
-    while True:
-        choice = input("Answer here: ")
-        if choice in dict:
-            break
-        else:
-            print('That is not a choice')
-    linebreak()
-    return choice
-        
 # prints the price and destination of the flight
 def price(dict, choice):
     print('''Your choice is: {}
