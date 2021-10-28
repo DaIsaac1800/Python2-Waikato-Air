@@ -1,10 +1,10 @@
 import Lists
-def menu(list):
-    no = 0
-    for i in list:
-         print(i)
-    for i in list:
-        for j in list[no]:
-            print(j)
-        no += 1
-menu(Lists.test)
+def confirm(list):
+    while True:
+        confirm = input('Yes or No').lower()
+        if confirm not in list[0] and confirm not in list[1]:
+            print('Invalid answer')
+        else:
+            break
+    return confirm
+print(confirm(Lists.confirm))
