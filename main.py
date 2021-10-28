@@ -1,7 +1,7 @@
 from lists import *
 from myfunctions import *
 # imports the list file to be used
-# imports all the functions file to be used
+# imports the functions file to be used
 
 print("Welcome to waikato air booking services")
 
