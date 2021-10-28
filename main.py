@@ -19,11 +19,6 @@ choice = functions.destination(lists.destinations, 'destination', name)
 functions.price(lists.destinations, choice)
 # prints the price and destination of the flight
 
-while True:
-    confirm = input('is this right?\n1: Yes \n2: No\nAnswer here: ')
-    if confirm in lists.confirmation[0]:
-        break
-    elif confirm in lists.confirmation[1]:
-        break
-    else:
-        print('that is not a choice avalible')
+confirm = functions.confirmer('Is this the correct destination',
+                              lists.confirmation)
+# calls the confirmer to ask if correct destination and returns it
