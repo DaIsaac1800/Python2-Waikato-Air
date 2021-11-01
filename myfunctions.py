@@ -33,7 +33,7 @@ Enter Here: ''').strip('!').lower()
         if len(name) <= 26 and len(name) >= 2:
             break
         elif len(name) >= 26 or len(name) <= 2:
-            print('That name is incorrect')
+            print('That name is not valid')
         else:
             print("I don't know how you did this")
     linebreak()
