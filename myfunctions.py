@@ -29,7 +29,7 @@ def destination(dict, sub_list, name):
 def name():
     while True:
         name = input('''What would you like to be called? (min 2, max 26)
-Enter Here: ''').strip('!').lower()
+Enter Here: ''').strip().lower()
         if len(name) <= 26 and len(name) >= 2:
             break
         elif len(name) >= 26 or len(name) <= 2:
