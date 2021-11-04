@@ -91,7 +91,7 @@ def destination_calculate(dict, sub_list, name, question, list):
             print('That is not a choice')
     linebreak()
     print('''Your choice is: {}
-          The price for this is: ${:.2f}
+The price for this is: ${:.2f}
           '''.format(dict[choice]['destination'],
           dict[choice]['price']))
     while True:
