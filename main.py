@@ -22,3 +22,6 @@ price(destinations, choice)
 confirm = confirmer('Is this the correct destination',
                     confirmation)
 # calls the confirmer to ask if correct destination and returns it
+
+destination_calculate(destinations, 'destination', name, 
+'Is this the correct destination', confirmation)
