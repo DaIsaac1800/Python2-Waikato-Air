@@ -43,6 +43,7 @@ Enter Here: ''').strip().lower()
     return name
 
 
+# calculates a discount using the random module and math
 def calculate(dict, choice):
     x = random.rand(0, 290)
     y = x / 100
@@ -104,3 +105,4 @@ def destination_calculate(dict, sub_list, name, question, list):
             destination_calculate(dict, sub_list, name, question, list)
         else:
             print('that is not a choice avalible')
+    return choice
