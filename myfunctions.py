@@ -45,10 +45,13 @@ Enter Here: ''').strip().lower()
 
 # calculates a discount using the random module and math
 def calculate(dicti, choice):
-    x = random.randrange(0, 290)
+    x = random.randrange(0, 50)
+# picks the discount amount
     y = x / 100
+    
     discount = 100 - y
-    discount_price = dicti[choice]['price'] - dicti[choice]['price'] * discount
+    print(discount)
+    discount_price = dicti[choice]['price'] - dicti[choice]['price'] * y
     print('''You have been alloated a discount of {}%
 Your price now is: ${:.2f}'''.format(discount, discount_price))
 
@@ -67,13 +70,12 @@ def confirmer(question, list):
         confirm = input('{}\n1: Yes \n2: No\nAnswer here: '
                         .format(question)).lower()
         if confirm in list[0]:
-            return confirm
             break
         elif confirm in list[1]:
-            return confirm
             break
         else:
             print('that is not a choice avalible')
+    return confirm
 
 
 # a combination of destination and price

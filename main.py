@@ -18,4 +18,9 @@ choice = destination_calculate(destinations, 'destination', name,
 # prints the price and destination of the flight
 # calls the confirmer to ask if correct destination returns choice
 
-calculate(destination, choice)
+
+confirm = confirmer('Are you flyin tommorow', confirmation)
+if confirm in confirmation[0]:
+    calculate(destinations, choice)
+
+print('Thank you for booking with Waikato air')
