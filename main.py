@@ -20,7 +20,9 @@ choice = destination_calculate(destinations, 'destination', name,
 
 
 confirm = confirmer('Are you flyin tommorow', confirmation)
+linebreak()
 if confirm in confirmation[0]:
     calculate(destinations, choice)
+    linebreak()
 
 print('Thank you for booking with Waikato air')
