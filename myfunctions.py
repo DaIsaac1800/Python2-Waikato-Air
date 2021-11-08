@@ -1,6 +1,7 @@
 import random
 # adds the random function to be used to add discounts
 
+
 # fuction used to make linebreaks
 def linebreak():
     print('''
