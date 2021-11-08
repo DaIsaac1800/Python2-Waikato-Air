@@ -11,15 +11,16 @@ linebreak()
 name = name()
 # asks for users name and saves as name
 
-choice = destination_calculate(destinations, 'destination', name, 
-'Is this the correct destination', confirmation)
+choice = destination_calculate(destinations, 'destination', name,
+                               'Is this the correct destination',
+                               confirmation)
 # used to print out the destinations
 # this is for choosing a destination from the list
 # prints the price and destination of the flight
 # calls the confirmer to ask if correct destination returns choice
 
 
-confirm = confirmer('Are you flyin tommorow', confirmation)
+confirm = confirmer('Are you flying tomorrow', confirmation)
 linebreak()
 if confirm in confirmation[0]:
     calculate(destinations, choice)
