@@ -48,12 +48,11 @@ def calculate(dicti, choice):
     x = random.randrange(0, 50)
 # picks the discount amount
     y = x / 100
-    
-    discount = 100 - y
-    print(discount)
+# makes it a decimal
     discount_price = dicti[choice]['price'] - dicti[choice]['price'] * y
-    print('''You have been alloated a discount of {}%
-Your price now is: ${:.2f}'''.format(discount, discount_price))
+# calculates the price when discounted
+    print('''You have been alloated a discount of {}%! due to flying tommorow
+Your price now is: ${:.2f}'''.format(x, discount_price))
 
 
 # prints the price and destination of the flight
