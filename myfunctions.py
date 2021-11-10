@@ -78,7 +78,7 @@ def confirmer(question, list):
     return confirm
 
 
-# a combination of destination and price
+# a combination of destination and price with the ablity to confirm the choice
 def destination_calculate(dicti, sub_list, name, question, list):
     print("{}, please choose a destination (Using numbers)\n"
           .format(name.capitalize()))
