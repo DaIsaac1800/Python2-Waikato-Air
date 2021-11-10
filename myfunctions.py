@@ -12,8 +12,8 @@ def linebreak():
 # function for listing off avaliable destinations
 # allowing the user to choose from a nested dictonarie
 def destination(dicti, sub_list, name):
-    print("{}, please choose a destination (Using numbers)\n"
-          .format(name.capitalize()))
+    print("{}, please choose a destination (Using numbers)\n".format(
+        name.capitalize()))
     y = 1
     for x in dicti:
         print("{}: {}".format(y, dicti[x][sub_list]))
@@ -25,7 +25,7 @@ def destination(dicti, sub_list, name):
         else:
             print('That is not a choice')
     linebreak()
-# returns the choosen answer provided by user
+    # returns the choosen answer provided by user
     return choice
 
 
@@ -47,11 +47,11 @@ Enter Here: ''').strip().lower()
 # calculates a discount using the random module and math
 def calculate(dicti, choice):
     x = random.randrange(0, 50)
-# picks the discount amount
+    # picks the discount amount
     y = x / 100
-# makes it a decimal
+    # makes it a decimal
     discount_price = dicti[choice]['price'] - dicti[choice]['price'] * y
-# calculates the price when discounted
+    # calculates the price when discounted
     print('''You have been alloated a discount of {}%! due to flying tommorow
 Your price now is: ${:.2f}'''.format(x, discount_price))
 
@@ -60,15 +60,14 @@ Your price now is: ${:.2f}'''.format(x, discount_price))
 def price(dicti, choice):
     print('''Your choice is: {}
 The price for this is: ${:.2f}
-    '''.format(dicti[choice]['destination'],
-               dicti[choice]['price']))
+    '''.format(dicti[choice]['destination'], dicti[choice]['price']))
 
 
 # a repetable confirmer if there is two answers
 def confirmer(question, list):
     while True:
-        confirm = input('{}\n1: Yes \n2: No\nAnswer here: '
-                        .format(question)).lower()
+        confirm = input(
+            '{}\n1: Yes \n2: No\nAnswer here: '.format(question)).lower()
         if confirm in list[0]:
             break
         elif confirm in list[1]:
@@ -80,8 +79,8 @@ def confirmer(question, list):
 
 # a combination of destination and price with the ablity to confirm the choice
 def destination_calculate(dicti, sub_list, name, question, list):
-    print("{}, please choose a destination (Using numbers)\n"
-          .format(name.capitalize()))
+    print("{}, please choose a destination (Using numbers)\n".format(
+        name.capitalize()))
     y = 1
     for x in dicti:
         print("{}: {}".format(y, dicti[x][sub_list]))
@@ -95,11 +94,10 @@ def destination_calculate(dicti, sub_list, name, question, list):
     linebreak()
     print('''Your choice is: {}
 The price for this is: ${:.2f}
-          '''.format(dicti[choice]['destination'],
-          dicti[choice]['price']))
+          '''.format(dicti[choice]['destination'], dicti[choice]['price']))
     while True:
-        confirm = input('{}\n1: Yes \n2: No\nAnswer here: '
-                        .format(question)).lower()
+        confirm = input(
+            '{}\n1: Yes \n2: No\nAnswer here: '.format(question)).lower()
         if confirm in list[0]:
             linebreak()
             break
