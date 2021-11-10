@@ -8,4 +8,5 @@ destinations = {'1': {'destination': 'Waikato to Wellington', 'price': 38.00},
                 '4': {'destination': 'Chirstchurch to Waikato',
                       'price': 41.00}}
 
+# just a simple list so i can use words too
 confirmation = (('yes', '1'), ('no', '2'))

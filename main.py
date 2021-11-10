@@ -25,5 +25,6 @@ linebreak()
 if confirm in confirmation[0]:
     calculate(destinations, choice)
     linebreak()
+# used to ask and calculate a discount avalaible to the user
 
 print('Thank you for booking with Waikato air')
