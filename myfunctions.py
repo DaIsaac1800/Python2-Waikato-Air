@@ -52,7 +52,7 @@ def calculate(dicti, choice):
     # makes it a decimal
     discount_price = dicti[choice]['price'] - dicti[choice]['price'] * y
     # calculates the price when discounted
-    print('''You have been alloated a discount of {}%! due to flying tommorow
+    print('''You have been allocated a discount of {}%! due to flying tommorow
 Your price now is: ${:.2f}'''.format(x, discount_price))
 
 
@@ -104,6 +104,7 @@ The price for this is: ${:.2f}
         elif confirm in list[1]:
             linebreak()
             destination_calculate(dicti, sub_list, name, question, list)
+            break
         else:
             print('that is not a choice avalible')
     return choice
