@@ -27,7 +27,7 @@ def menu(dicti, destinations, users):
             if choice == '1':
                 linebreak()
                 choice = choice_desti(destinations)
-                destination = 'Waikato to' + choice
+                destination = 'Waikato to ' + choice
                 users[fname] = destination
                 break
             elif choice == '2':
@@ -60,13 +60,15 @@ def choice_desti(destinations):
                     if choice == '1':
                         break
                     elif choice == '2':
-                        breakA
+                        break
                     else:
                         print('That is no choice')
                 linebreak()
                 break
         if choice == '1':
             break
+    for x in destinations[choice_destination]:
+        choice_destination = x
     return choice_destination
 
 
