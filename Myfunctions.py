@@ -16,7 +16,7 @@ def linebreak( shape = '-', length = 80, gap = 1, line = ''):
 def menu(dicti):
     fname = name()
     print('Hello {} welcome to waikato air booking service'.format(fname))
-    linebreak(line)
+    linebreak()
     print('Please pick an option using numbers\n')
     for x in dicti.keys():
         print('{}: {}'.format(x, dicti[x]))
@@ -30,13 +30,9 @@ def menu(dicti):
             break
         elif choice == '3':
             print(choice)
-            line = input('Please choose a shape for your line break?')
-            if line.len() == 1:
-                print('New line break is selcted it is now:\n{}'.format(line))
-
             break
         else:
             print('no')
 
 def destinations():
-    pass
+    print('Please choose destination')
