@@ -33,6 +33,7 @@ def menu(dicti, destinations, users):
             elif choice == '2':
                 linebreak()
                 user_display(users)
+                linebreak()
             elif choice == '3':
                 print('\nThank you for booking')
                 break
