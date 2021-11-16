@@ -1,5 +1,5 @@
 def name():
-    fname = input('Please Name here: ')
+    fname = input('Please input your First Name here: ')
     return fname
 
 # length max recomend 93
@@ -35,7 +35,8 @@ def menu(dicti, destinations, users):
                 user_display(users)
                 linebreak()
             elif choice == '3':
-                print('\nThank you for booking')
+                linebreak()
+                print('Thank you for booking with waikato air servcies')
                 break
             else:
                 print("I'm sorry that is not an option")
@@ -49,7 +50,7 @@ def choice_desti(destinations):
         print('Please choose destination')
         for x in destinations.keys():
             for y in destinations[x].keys():
-                print('{}: Waikato to {} {}'.format(x, y ,destinations[x][y]))
+                print('{}: Waikato to {} ${}'.format(x, y ,destinations[x][y]))
         while True:
             choice_destination = input('enter here: ')
             linebreak()
