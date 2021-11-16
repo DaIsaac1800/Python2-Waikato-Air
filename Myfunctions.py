@@ -1,7 +1,11 @@
 def name():
-    fname = input('Please input your First Name here: ')
-    return fname
+    fname = input('Please input your First Name here: ').lower()
+    lname = input('Please input you Last Name here: ').lower()
+    name = fname.capitalize() + " " + lname.capitalize()
+    return name
 
+
+# customizable line break
 # length max recomend 93
 def linebreak( shape = '-', length = 80, gap = 1, line = ''):
     while gap != 0:
@@ -13,6 +17,7 @@ def linebreak( shape = '-', length = 80, gap = 1, line = ''):
     print(line)
 
 
+# main function that the program loops back to
 def menu(dicti, destinations, users):
     while True:
         print('Hello welcome to waikato air booking service')
@@ -22,13 +27,14 @@ def menu(dicti, destinations, users):
             for x in dicti.keys():
                 print('{}: {}'.format(x, dicti[x]))
             choice = input('Enter here: ')
+# is the menu choices
             if choice == '1':
                 linebreak()
-                fname = name()
+                name_string = name()
                 linebreak()
                 choice = choice_desti(destinations)
                 destination = 'Waikato to ' + choice
-                users[fname] = destination
+                users[name_string] = destination
                 break
             elif choice == '2':
                 linebreak()
@@ -45,6 +51,7 @@ def menu(dicti, destinations, users):
             break
 
 
+# is a simple destination chooser
 def choice_desti(destinations):
     while True:
         print('Please choose destination')
@@ -74,6 +81,7 @@ def choice_desti(destinations):
     return choice_destination
 
 
+# displays all the users that have booked
 def user_display(users):
     print('Name: Destination')
     for x in users.keys():
