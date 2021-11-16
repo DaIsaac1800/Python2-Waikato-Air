@@ -15,16 +15,16 @@ def linebreak( shape = '-', length = 80, gap = 1, line = ''):
 
 def menu(dicti, destinations, users):
     while True:
-        fname = name()
-        linebreak()
-        print('Hello {} welcome to waikato air booking service'.format(fname))
+        print('Hello welcome to waikato air booking service')
         linebreak()
         while True:
             print('Please pick an option using numbers\n')
             for x in dicti.keys():
                 print('{}: {}'.format(x, dicti[x]))
-            choice = input('Enter here:')
+            choice = input('Enter here: ')
             if choice == '1':
+                linebreak()
+                fname = name()
                 linebreak()
                 choice = choice_desti(destinations)
                 destination = 'Waikato to ' + choice
@@ -38,7 +38,7 @@ def menu(dicti, destinations, users):
                 print('\nThank you for booking')
                 break
             else:
-                print('no')
+                print("I'm sorry that is not an option")
                 linebreak()
         if choice == '3':
             break
