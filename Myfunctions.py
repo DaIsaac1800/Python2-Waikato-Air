@@ -34,11 +34,11 @@ def menu(dicti, destinations, users, dates):
                 linebreak()
                 name_string = name()
                 linebreak()
-                choice = choice_desti(destinations)
+                choice, price = choice_desti(destinations)
                 choice_date = date(dates)
                 if choice_date == '1':
+                    print('due to your')
                     price = discounter(destinations, choice)
-                print(price)
                 destination = 'Waikato to ' + choice
                 users[name_string] = destination
                 break
@@ -84,18 +84,19 @@ def choice_desti(destinations):
                         print('That is not a choice')
                 linebreak()
                 break
+            else:
+                print('That is not a choice')
         if choice == '1':
+            price = destinations[choice_destination][p]
             break
-    for x in destinations[choice_destination]:
-        choice_destination = x
-    return choice_destination
+    return choice_destination, price
 
 
 def date(current_date):
-    print('When will you be flying?')
-    for x in current_date:
-        print(x)
     while True:
+        print('When will you be flying?')
+        for x in current_date:
+            print(x)
         choice = input('Enter here: ')
         if choice == '1':
             break
@@ -103,21 +104,24 @@ def date(current_date):
             break
         else:
             print('That is not an option')
+            linebreak()
+    linebreak()
     return choice
 
 
 def discounter(destinations, choice):
-    print(destinations.items())
-    x = destinations.items()
-
+    for x in destinations[choice]:
+        pass
+    p = destinations[choice][x]
+    print(p)
     pass
-    discount_per = random.randrange(1,10)
+    discount_per = random.randrange(5,11)
     discount = discount_per / 100
-    discounted_price = p * discount
+    discounted_price = p - p * discount
+# the math used for the discount
     print('Your discount is {}%\nYour flight price is now ${}'.format(discount_per, discounted_price))
-    
+    linebreak()
     return discounted_price
-    pass
 
 
 # displays all the users that have booked on the device
