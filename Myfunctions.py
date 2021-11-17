@@ -1,3 +1,5 @@
+import random
+
 def name():
     fname = input('Please input your First Name here: ').lower()
     lname = input('Please input you Last Name here: ').lower()
@@ -18,7 +20,7 @@ def linebreak(shape='-', length=80, gap=1, line=''):
 
 
 # main function that the program loops back to
-def menu(dicti, destinations, users):
+def menu(dicti, destinations, users, dates):
     while True:
         print('Hello welcome to waikato air booking service')
         linebreak()
@@ -33,6 +35,10 @@ def menu(dicti, destinations, users):
                 name_string = name()
                 linebreak()
                 choice = choice_desti(destinations)
+                choice_date = date(dates)
+                if choice_date == '1':
+                    price = discounter(destinations, choice)
+                print(price)
                 destination = 'Waikato to ' + choice
                 users[name_string] = destination
                 break
@@ -66,6 +72,7 @@ def choice_desti(destinations):
                     pass
 # line above fixes an error
                 print('Your choice is: Waikato to {}'.format(p))
+# loop exist in case one enters an answer that is not included
                 while True:
                     print('Is this right?\n1: Yes\n2: No')
                     choice = input('Enter here: ')
@@ -82,6 +89,35 @@ def choice_desti(destinations):
     for x in destinations[choice_destination]:
         choice_destination = x
     return choice_destination
+
+
+def date(current_date):
+    print('When will you be flying?')
+    for x in current_date:
+        print(x)
+    while True:
+        choice = input('Enter here: ')
+        if choice == '1':
+            break
+        elif choice == '2':
+            break
+        else:
+            print('That is not an option')
+    return choice
+
+
+def discounter(destinations, choice):
+    print(destinations.items())
+    x = destinations.items()
+
+    pass
+    discount_per = random.randrange(1,10)
+    discount = discount_per / 100
+    discounted_price = p * discount
+    print('Your discount is {}%\nYour flight price is now ${}'.format(discount_per, discounted_price))
+    
+    return discounted_price
+    pass
 
 
 # displays all the users that have booked on the device
