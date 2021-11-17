@@ -51,10 +51,10 @@ def menu(dicti, destinations, users):
             break
 
 
-# is a simple destination chooser
+# is a simple destination chooser with a confirmation
 def choice_desti(destinations):
     while True:
-        print('Please choose destination')
+        print('Please choose a destination')
         for x in destinations.keys():
             for y in destinations[x].keys():
                 print('{}: Waikato to {} ${}'.format(x, y, destinations[x][y]))
@@ -64,6 +64,7 @@ def choice_desti(destinations):
             if choice_destination in destinations:
                 for p in destinations[choice_destination].keys():
                     pass
+# line above fixes an error
                 print('Your choice is: Waikato to {}'.format(p))
                 while True:
                     print('Is this right?\n1: Yes\n2: No')
@@ -73,7 +74,7 @@ def choice_desti(destinations):
                     elif choice == '2':
                         break
                     else:
-                        print('That is no choice')
+                        print('That is not a choice')
                 linebreak()
                 break
         if choice == '1':
@@ -83,7 +84,7 @@ def choice_desti(destinations):
     return choice_destination
 
 
-# displays all the users that have booked
+# displays all the users that have booked on the device
 def user_display(users):
     print('Name: Destination')
     for x in users.keys():
