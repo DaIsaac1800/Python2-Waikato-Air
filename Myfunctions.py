@@ -7,7 +7,7 @@ def name():
 
 # customizable line break
 # length max recomend 93
-def linebreak( shape = '-', length = 80, gap = 1, line = ''):
+def linebreak(shape='-', length=80, gap=1, line=''):
     while gap != 0:
         print('')
         gap -= 1
@@ -45,7 +45,7 @@ def menu(dicti, destinations, users):
                 print('Thank you for booking with waikato air servcies')
                 break
             else:
-                print("I'm sorry that is not an option")
+                print("\nI'm sorry that is not an option")
                 linebreak()
         if choice == '3':
             break
@@ -57,12 +57,14 @@ def choice_desti(destinations):
         print('Please choose destination')
         for x in destinations.keys():
             for y in destinations[x].keys():
-                print('{}: Waikato to {} ${}'.format(x, y ,destinations[x][y]))
+                print('{}: Waikato to {} ${}'.format(x, y, destinations[x][y]))
         while True:
             choice_destination = input('enter here: ')
             linebreak()
             if choice_destination in destinations:
-                print('Your choice is: Waikato to {}'.format(y))
+                for p in destinations[choice_destination].keys():
+                    pass
+                print('Your choice is: Waikato to {}'.format(p))
                 while True:
                     print('Is this right?\n1: Yes\n2: No')
                     choice = input('Enter here: ')
@@ -86,5 +88,3 @@ def user_display(users):
     print('Name: Destination')
     for x in users.keys():
         print('{}: {}'.format(x, users[x]))
-    
-
