@@ -92,6 +92,7 @@ def choice_desti(destinations):
             break
     return choice_destination
 
+
 # function for asking when they are flying
 def date(current_date, destinations, choice_dest):
     while True:
@@ -120,11 +121,12 @@ def discounter(destinations, choice):
     for x in destinations[choice]:
         pass
     p = destinations[choice][x]
-    discount_per = random.randrange(5,11)
+    discount_per = random.randrange(5, 11)
     discount = discount_per / 100
     discounted_price = p - p * discount
 # the math used for the discount
-    print('Your discount is {}%\nYour flight price is now ${:.2f}'.format(discount_per, discounted_price))
+    print('Your discount is {}%\nYour flight price is now ${:.2f}'
+          .format(discount_per, discounted_price))
     return discounted_price
 
 
