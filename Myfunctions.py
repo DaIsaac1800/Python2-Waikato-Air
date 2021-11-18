@@ -2,7 +2,7 @@ import random
 
 def name():
     fname = input('Please input your First Name here: ').lower()
-    lname = input('Please input you Last Name here: ').lower()
+    lname = input('\nPlease input you Last Name here: ').lower()
     name = fname.capitalize() + " " + lname.capitalize()
     return name
 
@@ -37,10 +37,12 @@ def menu(dicti, destinations, users, dates):
                 choice, price = choice_desti(destinations)
                 choice_date = date(dates)
                 if choice_date == '1':
-                    print('due to your')
+                    print('due to flying tommorow you have a discount')
                     price = discounter(destinations, choice)
+                for x in destinations[choice]:
+                    choice = x
                 destination = 'Waikato to ' + choice
-                users[name_string] = destination
+                users = {name_string: {destination: price}}
                 break
             elif choice == '2':
                 linebreak()
@@ -113,19 +115,18 @@ def discounter(destinations, choice):
     for x in destinations[choice]:
         pass
     p = destinations[choice][x]
-    print(p)
-    pass
     discount_per = random.randrange(5,11)
     discount = discount_per / 100
     discounted_price = p - p * discount
 # the math used for the discount
-    print('Your discount is {}%\nYour flight price is now ${}'.format(discount_per, discounted_price))
+    print('Your discount is {}%\nYour flight price is now ${:.2f}'.format(discount_per, discounted_price))
     linebreak()
     return discounted_price
 
 
 # displays all the users that have booked on the device
 def user_display(users):
-    print('Name: Destination')
+    print('Name: Destination: Price')
     for x in users.keys():
-        print('{}: {}'.format(x, users[x]))
+        for y in users[x].keys():
+            print('{}: {}: ${:.2f}'.format(x, y, users[x][y]))
