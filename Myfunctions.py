@@ -1,4 +1,6 @@
 import random
+# imports so it can be used in a function
+
 
 def name():
     fname = input('Please input your First Name here: ').lower()

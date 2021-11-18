@@ -1,5 +1,5 @@
 import datetime
-# imports the date time module so i can use it in a list
+# imports the date time module so it can be used in a list
 
 menu_choices = {'1': 'Choose destination', '2': 'View users booked', '3': 'Exit'}
 
