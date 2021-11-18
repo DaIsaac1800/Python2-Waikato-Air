@@ -35,13 +35,9 @@ def menu(dicti, destinations, users, dates):
                 name_string = name()
                 linebreak()
                 choice, price = choice_desti(destinations)
-                choice_date = date(dates)
-                if choice_date == '1':
-                    print('due to flying tommorow you have a discount')
-                    price = discounter(destinations, choice)
+                price = date(dates, destinations, choice)
                 for x in destinations[choice]:
-                    choice = x
-                destination = 'Waikato to ' + choice
+                    destination = 'Waikato to' + x
                 users = {name_string: {destination: price}}
                 break
             elif choice == '2':
@@ -94,13 +90,15 @@ def choice_desti(destinations):
     return choice_destination, price
 
 
-def date(current_date):
+def date(current_date, destinations, choice_dest):
     while True:
         print('When will you be flying?')
         for x in current_date:
             print(x)
         choice = input('Enter here: ')
         if choice == '1':
+            print('due to flying tommorow you have a discount')
+            price = discounter(destinations, choice_dest)
             break
         elif choice == '2':
             break
@@ -108,7 +106,7 @@ def date(current_date):
             print('That is not an option')
             linebreak()
     linebreak()
-    return choice
+    return price
 
 
 def discounter(destinations, choice):
@@ -120,7 +118,6 @@ def discounter(destinations, choice):
     discounted_price = p - p * discount
 # the math used for the discount
     print('Your discount is {}%\nYour flight price is now ${:.2f}'.format(discount_per, discounted_price))
-    linebreak()
     return discounted_price
 
 
