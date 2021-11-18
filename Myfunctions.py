@@ -34,11 +34,13 @@ def menu(dicti, destinations, users, dates):
                 linebreak()
                 name_string = name()
                 linebreak()
-                choice, price = choice_desti(destinations)
+                choice = choice_desti(destinations)
                 price = date(dates, destinations, choice)
                 for x in destinations[choice]:
                     destination = 'Waikato to' + x
+# loop for making choice the destination not a number
                 users = {name_string: {destination: price}}
+# adds the current user info to a dictionarie
                 break
             elif choice == '2':
                 linebreak()
@@ -85,11 +87,10 @@ def choice_desti(destinations):
             else:
                 print('That is not a choice')
         if choice == '1':
-            price = destinations[choice_destination][p]
             break
-    return choice_destination, price
+    return choice_destination
 
-
+# function for asking when they are flying
 def date(current_date, destinations, choice_dest):
     while True:
         print('When will you be flying?')
@@ -99,8 +100,12 @@ def date(current_date, destinations, choice_dest):
         if choice == '1':
             print('due to flying tommorow you have a discount')
             price = discounter(destinations, choice_dest)
+# gives a discount if this choice is chosen
             break
         elif choice == '2':
+            for x in destinations[choice_dest].keys():
+                price = destinations[choice_dest][x]
+# loop exists so that price isn't an unkown variable when returned
             break
         else:
             print('That is not an option')
@@ -127,3 +132,4 @@ def user_display(users):
     for x in users.keys():
         for y in users[x].keys():
             print('{}: {}: ${:.2f}'.format(x, y, users[x][y]))
+# loop used to repeat for all current users
