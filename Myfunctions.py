@@ -39,7 +39,7 @@ def menu(dicti, destinations, users, dates):
                 choice = choice_desti(destinations)
                 price = date(dates, destinations, choice)
                 for x in destinations[choice]:
-                    destination = 'Waikato to' + x
+                    destination = 'Waikato to ' + x
 # loop for making choice the destination not a number
                 users = {name_string: {destination: price}}
 # adds the current user info to a dictionarie
