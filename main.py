@@ -4,7 +4,8 @@ from myfunctions import *
 # imports the functions file to be used
 
 while True:
-# makes it so the program repeats
+    # makes it so the program repeats
+
     print("Welcome to waikato air booking services")
 
     linebreak()
@@ -14,9 +15,9 @@ while True:
 # asks for users name and saves as name
 
     choice = destination_calculate(destinations, 'destination',
-                               name_string,
-                               'Is this the correct destination?',
-                               confirmation_list)
+                                   name_string,
+                                   'Is this the correct destination?',
+                                   confirmation_list)
 # used to print out the destinations
 # this is for choosing a destination from the list
 # prints the price and destination of the flight
@@ -29,7 +30,7 @@ while True:
         calculate(destinations, choice)
         linebreak()
 # used to ask and calculate a discount avalaible to the user
-    
+
     confirm = confirmer('Do you want to book agian?',
                         confirmation_list)
     linebreak()
